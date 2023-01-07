@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projeto academy</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<div th:replace="~{fragments/fragment :: header}"></div>
+
+<section class="section-banner">
+<div class="shadow"></div>
+<div class="content d-flex">
+<h1>Feira de ciências, publique seu projeto!</h1>
+<div class="d-flex mt-5">
+	<a class="btn btn-default" href=""><i class="fa-sharp fa-solid fa-atom"></i> Cadastrar projeto</a>
+	<a class="btn btn-default ms-3"><i class="fa-solid fa-magnifying-glass"></i> Pesquisar projeto</a>
+</div>
+
+</div>
+
+
+</section>
+
+<section class="container informations">
+	<h2>Saiba mais</h2>
+	<p>O presente projeto tem como finalidade colocar a prova os conhecimentos de desenvolvimento Web de Dilson Campêlo, um jovem programador cheio de objetivos! Sua data de início se em 07/01/2023. Até então, Dilson possui uma carga relativamente longa desenvolvendo com PHP e Laravel, mas decidiu se aventurar pelos caminhos do que dizem ser a linguagem de programaçao mais "complicada", mas a utilização do Spring Framework torna qualquer sonho realidade!</p>
+
+</section>
+
+<div th:replace="~{fragments/fragment::footer}"></div>
+<script src="/webjars/jquery/3.6.3/jquery.min.css"></script>
+<script src="/webjars/bootstrap/css/bootstrap.bundle.min.js"></script>
+</body>
+</html>
