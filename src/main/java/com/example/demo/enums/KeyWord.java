@@ -14,5 +14,9 @@ public enum KeyWord {
 	private KeyWord(String keyWord) {
 		this.keyWord = keyWord;
 	}
+	
+	public String getKeyWord() {
+		return this.keyWord;
+	}
 
 }

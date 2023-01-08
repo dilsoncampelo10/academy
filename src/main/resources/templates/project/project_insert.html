@@ -13,13 +13,13 @@
 	<div class="container mt-5 min-vh-75">
 	<h2>+ Inserir Projeto</h2>
 	<hr> <br>
-		<form action="" method="post">
+		<form action="/project/create" method="post" th:object="${project}">
 			<label class="form-label"><strong>Título do projeto</strong></label>
-			<input class="form-control" placeholder="Digite título para o projeto">
+			<input class="form-control" placeholder="Digite título para o projeto" th:field="*{title}">
 			<label class="form-label"><strong>Resumo</strong></label>
-			<textarea rows="4" class="form-control" placeholder="Digite o resumo do seu projeto"></textarea>
+			<textarea rows="4" class="form-control" placeholder="Digite o resumo do seu projeto" th:field="*{abstractProject}"></textarea>
 			<label class="form-label"><strong>Palavra chave</strong></label>
-			<select class="form-select">
+			<select class="form-select" th:field="*{keyWord}">
 				<option th:each="keyword : ${T(com.example.demo.enums.KeyWord).values()}" th:value="${keyword}" th:text="${keyword}">ew</option>
 			</select>
 			

@@ -3,6 +3,8 @@ package com.example.demo.models;
 import com.example.demo.enums.KeyWord;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -18,6 +20,7 @@ public class Project {
 	
 	private String abstractProject;
 	
+	@Enumerated(EnumType.STRING)
 	private KeyWord keyWord;
 
 	public Integer getId() {
