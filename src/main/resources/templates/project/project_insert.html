@@ -13,7 +13,7 @@
 	<div class="container mt-5 min-vh-75">
 	<h2>+ Inserir Projeto</h2>
 	<hr> <br>
-		<form action="">
+		<form action="" method="post">
 			<label class="form-label">Título do projeto</label>
 			<input class="form-control" placeholder="Digite título para o projeto">
 			<label class="form-label">Resumo</label>
@@ -23,9 +23,11 @@
 			
 			</select>
 			
-			<input type="submit" value="Submeter" class="mt-3 btn btn-primary">
+			<button class="mt-3 btn btn-primary" type="submit"><i class="fa-solid fa-paper-plane"></i> Submeter</button>
+
+			<a th:href="@{/}" class="btn btn-danger mt-3"><i class="fa-solid fa-rotate-left"></i> Voltar</a>
 		</form>
-	</div> <br>
+	</div> <br> <br>
 		
 	<div th:replace="~{fragments/fragment::footer}"></div>
 	
