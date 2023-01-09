@@ -70,3 +70,17 @@ footer{
 	width: 100%;
 }
 
+.informations-projects{
+	flex: 1;
+	text-align: center;
+	flex-direction: column;
+}
+.project-banner{
+	background-image: url("../images/science.gif");
+	background-position:center;
+	background-size:cover;
+	height: 400px;
+	width: 300px;
+	flex: 1;
+}
+

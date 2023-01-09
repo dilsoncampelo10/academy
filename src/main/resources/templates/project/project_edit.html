@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projeto academy</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+
+<div th:replace="~{fragments/fragment::header}"></div>
+
+<div class="container mt-5 min-vh-75">
+	<h2>+ Editar Projeto</h2>
+	<hr> <br>
+		<form action="/project/edit" method="post" th:object="${project}">
+			<input type="hidden" th:field="*{id}">
+			<label class="form-label"><strong>Título do projeto</strong></label>
+			<input class="form-control" placeholder="Digite título para o projeto" th:field="*{title}">
+			<label class="form-label"><strong>Resumo</strong></label>
+			<textarea rows="4" class="form-control" placeholder="Digite o resumo do seu projeto" th:field="*{abstractProject}"></textarea>
+			<label class="form-label"><strong>Palavra chave</strong></label>
+			<select class="form-select" th:field="*{keyWord}">
+				<option th:each="keyword : ${T(com.example.demo.enums.KeyWord).values()}" th:value="${keyword}" th:text="${keyword}">ew</option>
+			</select>
+			
+			<button class="mt-3 btn btn-primary" type="submit"><i class="fa-solid fa-paper-plane"></i> Submeter</button>
+
+			<a th:href="@{/project/show}" class="btn btn-danger mt-3"><i class="fa-solid fa-rotate-left"></i> Voltar</a>
+		</form>
+	</div> <br> <br>
+
+<div th:replace="~{fragments/fragment::footer}"></div>
+<script src="/webjars/jquery/3.6.3/jquery.min.css"></script>
+<script src="/webjars/bootstrap/css/bootstrap.bundle.min.js"></script>
+</body>
+</html>
