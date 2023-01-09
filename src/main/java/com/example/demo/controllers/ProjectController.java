@@ -57,4 +57,10 @@ public class ProjectController {
 		mv.setViewName("redirect:show");
 		return mv;
 	}
+	
+	@GetMapping("/project/delete/{id}")
+	public String delete(@PathVariable("id") Integer id) {
+		projectRepository.deleteById(id);
+		return "redirect:/project/show";
+	}
 }
