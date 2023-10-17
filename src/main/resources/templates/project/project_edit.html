@@ -18,11 +18,11 @@
 		<form action="/project/edit" method="post" th:object="${project}">
 			<input type="hidden" th:field="*{id}">
 			<label class="form-label"><strong>Título do projeto</strong></label>
-			<input class="form-control" placeholder="Digite título para o projeto" th:field="*{title}">
+			<input class="form-control" placeholder="Digite título para o projeto" th:field="*{title}" required>
 			<label class="form-label"><strong>Resumo</strong></label>
 			<textarea rows="4" class="form-control" placeholder="Digite o resumo do seu projeto" th:field="*{abstractProject}"></textarea>
 			<label class="form-label"><strong>Palavra chave</strong></label>
-			<select class="form-select" th:field="*{keyWord}">
+			<select class="form-select" th:field="*{keyWord}" required>
 				<option th:each="keyword : ${T(com.example.demo.enums.KeyWord).values()}" th:value="${keyword}" th:text="${keyword}">ew</option>
 			</select>
 			
